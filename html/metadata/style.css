@@ -1,0 +1,16 @@
+html {
+    background-color: #6c41ec;
+    font-size: 20px;
+}
+
+ul {
+    background: rgba(1, 12, 63, 0.7);
+    padding: 10px;
+    border: 1px solid #010c3f;
+}
+
+li {
+    margin-left: 20px;
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
