@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Video with Controls</title>
+</head>
+<body>
+    <h1>Below is a simple video sample.</h1>
+    <video controls 
+           muted loop poster="poster.png" preload="metadata">
+        <source src="rabbit320.webm" type="video/webm">
+        <source src="rabbit320.mp4" type="video/mp4">
+        <p>If your browser does not support this video tag, <a href="./rabbit320.webm">visit the video here.</a></p>
+    </video>
+
+    <h2>Below is a simple audio sample</h2>
+    <audio controls muted>
+        <source src="viper.mp3" type="audio/mp3">
+        <source src="viper.ogg" type="audio/ogg">
+        <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+    </audio>
+
+    <h2>Another video sample.</h2>
+    <video controls muted poster="poster.jpeg">
+        <source src="./mrvg.mp4" type="video/mp4">
+        <track 
+           kind="captions"
+           srclang="en"
+           src="./mrvg.vtt" />
+           <p>Seems like the html file needs to be put on a server in order to be run properly.</p>
+        <p>Your browser doesn't support HTML5 audio. 
+            Here is a <a href="./mrvg.mp4">link to the video</a> instead.
+        </p>
+    </video>
+</body>
+</html>
