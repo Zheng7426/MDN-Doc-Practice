@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Examples of Different Display Types</h2>
+    <p>I am a paragraph, a short one</p>
+    <ul class="flex-list">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+    <p>
+    I am yet another paragraph. 
+    Some of the <span class="block">words</span>
+    have been wrapped in a <span>span element</span>.
+    </p>
+    <hr />
+    <p class="inline-para">I am a paragraph, a short one</p>
+    <ul class="inline-flex-list">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+    <p>
+        I am yet another paragraph. 
+        Some of the <span class="block">words</span>
+        have been wrapped in a <span>span element</span>.
+    </p>
+    <ul class="inline-flex-list"><li>hey</li></ul>
+    <br>
+    <h2>Two types of the box model.</h2>
+    <div class="box">I use the standard box model</div>
+    <div class="box alternative">I use the alternative box model.</div>
+    <h2>Margin</h2>
+    <div class="container">
+        <div class="margin-box">Change my margin.</div>
+    </div>
+    <h2>Margin Collapse</h2>
+    <div class="container">
+        <p class="one">I am paragraph one.</p>
+        <p class="two">I am paragraph two.</p>
+    </div>
+    <h2>Border</h2>
+    <div class="border-container">
+        <div class="border-box">Change my borders.</div>
+    </div>
+    <h2>Inline Block</h2>
+    <p class="inline-block-para">
+        I am a paragraph and this is a <span class="inline-block-span">span</span> inside that paragraph. A span is an inline element and so does not respect width and height.
+    </p>  
+</body>
+</html>
