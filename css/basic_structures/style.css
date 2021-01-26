@@ -1,0 +1,57 @@
+/** ======= Universal Style ======= **/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+pre {
+    background-color:lightgray;
+    width: 30%;
+}
+
+
+/** ======= Specificity ======= **/
+.special {
+    color: maroon;
+}
+
+p {
+    color:cornflowerblue;
+}
+
+/** ======= Link States ======= **/
+#sec-2 a:link {
+    color: mediumturquoise;
+    font-size: 2em;
+}
+
+#sec-2 a:hover {
+    text-decoration: none;
+    color: tomato;
+}
+
+/** ======= Function ======= **/
+.outer {
+    border: 5px solid black;
+}
+
+.box {
+    padding: 10px;
+    width: calc(70%);
+    background-color: purple;
+    color: white;
+}
+
+.rotating-box {
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color:royalblue;
+    transform: rotate(0.45turn);
+}
+
+
+/* @media (max-width: 600px) {
+    .rotating-box {
+      background-color: midnightblue;
+    }
+} */

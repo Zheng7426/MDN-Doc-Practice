@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Anonymous">
+        <meta name="description" content="css fundamental ideas - selectors, specificity, cascade, functions.">
+        <title>How Cascading StyleSheet is structured</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>How Cascading StyleSheet works</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Specificity</h2>
+                <p class="special">What color would this paragraph be displayed in?</p>
+                <pre>
+                    <code>
+                    .special {
+                        color: maroon;
+                    }
+        
+                    p {
+                        color: cornflowerblue;
+                    }</code>
+                </pre>
+            </section>
+            <section id="sec-2">
+                <h2>Styling based on states</h2>
+                <a href="#">Link</a>
+            </section>
+            <section>
+                <h2>Function</h2>
+                <div class="outer"><div class="box">The inner box is 70% of the container width.</div></div>
+                <br>
+                <div class="rotating-box"></div>
+            </section>
+        </main>
+        
+    </body>
+</html>
