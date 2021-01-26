@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascades and Inheritance of CSS rules</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="Inheritance">
+        <ul>
+            <li>Default <a href="#">link</a> color</li>
+            <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+            <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+            <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+        </ul>
+    </section>
+    <section id="Specificity">
+        <h2>Heading with no class</h2>
+        <h2 class="small">Heading with class of small</h2>
+        <h2 class="bright">Heading with class of bright</h2>
+    </section>
+    <section>
+        <div id="outer" class="container">
+            <div id="inner" class="container">
+                <ul>
+                    <li class="nav"><a href="#">One</a></li>
+                    <li class="nav"><a href="#">Two</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
