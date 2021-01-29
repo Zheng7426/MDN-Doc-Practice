@@ -1,0 +1,71 @@
+/** ======== General Style ========= **/
+html {
+    font-family: sans-serif;
+  }
+
+body {
+    margin: 0;
+}
+
+header {
+    background: purple;
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+}
+
+
+/** ======== Flexbox Implementation ========= **/
+/* section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 400px;
+} */
+
+section {
+    display: flex;
+}
+
+article {
+    flex: 1;
+}
+
+article:nth-of-type(3) {
+    flex: 2;
+}
+
+button {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 15%;
+}
+
+div {
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+button:first-child {
+    order: 1;
+}
+
+button:nth-of-type(4) {
+    order: -1;
+}
