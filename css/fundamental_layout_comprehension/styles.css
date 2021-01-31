@@ -1,0 +1,111 @@
+/** ======= Initial-setup ======= **/
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+.logo {
+    font-family: 'Potta One', cursive;
+    font-size: 200%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+}
+
+nav {
+    background-color: #000;
+    padding: .5em;
+    width: 90%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    border-radius: 5px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+}
+
+nav a:hover {
+    color: lightgray;
+    transition: .5s;
+}
+
+.photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feature {
+    width: 200px;
+    float: left;
+    margin-inline-end: 1.2rem;
+}
+
+
+/** ======= Media-queries ======= **/
+@media screen and (max-width: 69em) {
+    .logo {
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    article img + p {
+        clear: left;
+    }
+
+    article, aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        margin-block-end: 1rem;
+    }
+}
+
+@media screen and (min-width: 70em) {
+    .grid {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 1rem;
+    }
+    
+    .photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1px;
+    }
+}
