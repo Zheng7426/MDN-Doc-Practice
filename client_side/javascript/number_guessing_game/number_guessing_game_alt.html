@@ -18,7 +18,7 @@
     <div class="form">
         <label for="guessField">Enter a guess:</label>
         <input type="text" id="guessField" class="guessField">
-        <input type="submit" value="Submit guess" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
     <div class="resultParas">
         <p class="guesses"></p>
@@ -29,31 +29,31 @@
 
     <script>
         const submitButton = document.querySelector("input[type='submit']");
+        const guessField = document.querySelector("input[type='text']");
         const guessPara = document.querySelector(".guesses");
         const lastResultPara = document.querySelector(".lastResult");
         const lowOrHiPara = document.querySelector(".lowOrHi");
         const turnsLeftPara = document.querySelector(".turnsLeft");
-        const randNum = Math.floor(Math.random() * 100);
+        let randNum = Math.ceil(Math.random() * 100);            // Number should be between 1 and 100. 
         let turnsLeft = 10;
         let lastResult;
         let ended = false;
         let playAgainButton = document.createElement("button");
         playAgainButton.textContent = "Play Again";
+        guessField.focus();
 
         console.log(randNum);
         
         function updateResult() {
-
-            const guessField = document.querySelector("input[type='text']");
-            const guess = Number(guessField.value);
+            let guess = Number(guessField.value);
             turnsLeft -= 1;
             if (turnsLeft === 0) {
-                guessField.value = '';
+                guessField.value = "";
                 turnsLeftPara.textContent = "You have no turns left. Game ends here.";
                 playEnds();
             } else {
                 if (guess === randNum ) {
-                    guessField.value = '';
+                    guessField.value = "";
                     guessPara.textContent = `Current guess: ${guess}`;
                     lowOrHiPara.textContent = "You guessed correctly!!! Game ends here.";
                     playEnds();
@@ -62,34 +62,41 @@
                     guessPara.textContent = `Current guess: ${guess}`;
                     lowOrHiPara.textContent = "Too low! Should try a higher number.";
                     lastResult = guess;
+                    guessField.focus();
                 } else {
                     lastResult ? lastResultPara.textContent = `Previous guess: ${lastResult}`: '';
                     guessPara.textContent = `Current guess: ${guess}`;
                     lowOrHiPara.textContent = "Too high! Should try a lower number.";
                     lastResult = guess;
+                    guessField.focus();
                 }
-                turnsLeftPara.textContent = ended ? '' : `You have ${turnsLeft} attempts left.`;
+                turnsLeftPara.textContent = ended ? "" : `You have ${turnsLeft} attempts left.`;
             }
         }
 
         function playEnds() {
             ended = true;
-            lastResult = '';
+            lastResult = "";
             turnsLeft = 10;
-            lastResultPara.textContent = '';
+            lastResultPara.textContent = "";
             submitButton.setAttribute("disabled", "");
+            guessField.disabled = true;
             document.body.appendChild(playAgainButton);   
         }
         
         function playOn() {
             ended = false;
             submitButton.removeAttribute("disabled");
+            guessField.disabled = false;
             lowOrHiPara.textContent = guessPara.textContent = "";
             document.body.removeChild(playAgainButton);
+            randNum = Math.ceil(Math.random() * 100); 
+            console.log(randNum);
+            guessField.focus();
         }
 
-        submitButton.addEventListener('click', updateResult);
-        playAgainButton.addEventListener('click', playOn);
+        submitButton.addEventListener("click", updateResult);
+        playAgainButton.addEventListener("click", playOn);
     </script>
 </body>
 </html>
