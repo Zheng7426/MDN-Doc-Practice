@@ -1,0 +1,23 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+}
+
+.form::after {
+    background-image: linear-gradient(90deg, #00458b, #83d0f2);
+    content: "";
+    display: block;
+    height: 5px;
+    margin: 15px 0;
+}
+
+.lastResult {
+    color: black;
+    /* padding: 3px; */
+}
