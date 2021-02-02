@@ -1,5 +1,5 @@
 html {
-    font-family: sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
@@ -7,6 +7,10 @@ body {
     max-width: 800px;
     min-width: 480px;
     margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Potta One', cursive;
 }
 
 .form::after {
