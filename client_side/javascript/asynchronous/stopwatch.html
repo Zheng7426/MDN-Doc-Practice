@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch example</title>
+    
+</head>
+<body>
+    <p class="clock"></p>
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+        <button class="reset">Reset</button>
+    <script>
+        const para = document.querySelector(".clock");
+        const btnStart = document.querySelector(".start");
+        const btnStop = document.querySelector(".stop");
+        const btnReset = document.querySelector(".reset");
+
+        let secondCount = 0;
+        let stopWatch;
+
+        function displayCount() {
+            let hrs = Math.floor(secondCount / 3600);
+            let min = Math.floor(secondCount % 3600 / 60);
+            let sec = Math.floor(secondCount % 60);
+            let displayHrs = (hrs <= 9) ? `0${hrs}` : hrs;
+            let displayMin = (min <= 9) ? `0${min}` : min;
+            let displaySec = (sec <= 9) ? `0${sec}` : sec;
+
+            para.textContent = `${displayHrs}:${displayMin}:${displaySec}`;
+            secondCount++;
+        }
+
+        btnStart.onclick = function(e) {
+            e.target.disabled = true;
+            // let startTime = Date.now();
+            // let millis = Date.now() - startTime
+            stopWatch = setInterval(displayCount, 1000);
+        }
+
+        btnStop.onclick = function() {
+            btnStart.disabled = false;
+            clearInterval(stopWatch);
+        }
+
+        btnReset.addEventListener('click', () => {
+            secondCount = 0;
+            btnStart.disabled = false;
+            clearInterval(stopWatch);
+            displayCount();
+        })
+
+        displayCount();
+    </script>
+</body>
+</html>

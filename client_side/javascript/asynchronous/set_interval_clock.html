@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A setInterval clock</title>
+</head>
+<body>
+    <p class="clock"></p>
+    <script>
+        let para = document.querySelector(".clock");
+        function displayTime() {
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            para.textContent = time;
+        }
+        displayTime();
+        let createClock = setInterval(displayTime, 1000);
+        setTimeout(() => {
+            clearInterval(createClock);
+            para.textContent = "";
+        }, 5000);
+    </script>
+</body>
+</html>
